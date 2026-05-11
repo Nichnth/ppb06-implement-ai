@@ -1,0 +1,50 @@
+class InputValidators {
+  static String? fullName(String? value) {
+    final text = value?.trim() ?? '';
+    if (text.isEmpty) {
+      return 'Full name is required.';
+    }
+    if (text.length < 2) {
+      return 'Full name must be at least 2 characters.';
+    }
+    return null;
+  }
+
+  static String? email(String? value) {
+    final text = value?.trim() ?? '';
+    if (text.isEmpty) {
+      return 'Email is required.';
+    }
+
+    const emailPattern =
+        r"^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}"
+        r"[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$";
+
+    final isValid = RegExp(emailPattern).hasMatch(text);
+    if (!isValid) {
+      return 'Please enter a valid email.';
+    }
+    return null;
+  }
+
+  static String? password(String? value) {
+    final text = value ?? '';
+    if (text.isEmpty) {
+      return 'Password is required.';
+    }
+    if (text.length < 8) {
+      return 'Password must be at least 8 characters.';
+    }
+    return null;
+  }
+
+  static String? confirmPassword(String? value, String password) {
+    if ((value ?? '').isEmpty) {
+      return 'Please confirm your password.';
+    }
+    if (value != password) {
+      return 'Passwords do not match.';
+    }
+    return null;
+  }
+}

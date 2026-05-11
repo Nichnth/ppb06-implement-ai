@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "192369133536",
+    "project_id": "ppb-colorcam",
+    "storage_bucket": "ppb-colorcam.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:192369133536:android:6f68c03809bce81bcf4d85",
+        "android_client_info": {
+          "package_name": "com.example.colorcam"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBd54kJBtcoRCi0IkO_ZWrKKUSkhnPJMMI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
